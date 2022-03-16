@@ -42,3 +42,6 @@ jobs:
 
       - name: Building
         run: npm run build
+
+      - name: Unit and Integration Testing (Jasmine + Karma)
+        run: npm run test:ci
