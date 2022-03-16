@@ -1,7 +1,42 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "51da15cd-9c5c-4efe-b058-de433a9e86df"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "metronomy": {
+      "projectType": "library",
+      "root": "projects/metronomy",
+      "sourceRoot": "projects/metronomy",
+      "prefix": "met",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/metronomy/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/metronomy/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/metronomy/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/metronomy/src/test.ts",
+            "tsConfig": "projects/metronomy/tsconfig.spec.json",
+            "karmaConfig": "projects/metronomy/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "metronomy"
 }

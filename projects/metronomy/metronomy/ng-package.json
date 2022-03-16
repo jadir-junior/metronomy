@@ -1,0 +1,6 @@
+{
+  "$schema": "ng-packagr/ng-package.schame.json",
+  "lib": {
+    "entryFile": "public-api.ts"
+  }
+}
