@@ -42,6 +42,7 @@
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
     "import-sort": "^6.0.0",
     "import-sort-cli": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
@@ -51,6 +52,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "lint-staged": "^12.3.6",
     "ng-packagr": "^13.0.0",
     "prettier": "^2.6.0",
     "typescript": "~4.5.2",
@@ -62,5 +64,14 @@
       "style": "eslint",
       "options": {}
     }
+  },
+  "lint-staged": {
+    "projects/**/*.ts": [
+      "import-sort -l"
+    ],
+    "projects/**/*.{ts,html,scss}": [
+      "prettier --check",
+      "eslint --max-warnings=0"
+    ]
   }
 }
