@@ -36,3 +36,6 @@ jobs:
 
       - name: Check Style
         run: npm run style
+
+      - name: Checking Lint
+        run: npm run lint
