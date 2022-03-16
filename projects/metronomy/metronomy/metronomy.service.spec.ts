@@ -1,6 +1,5 @@
-import { TestBed } from '@angular/core/testing';
-
 import { MetronomyService } from './metronomy.service';
+import { TestBed } from '@angular/core/testing';
 
 describe('MetronomyService', () => {
   let service: MetronomyService;
