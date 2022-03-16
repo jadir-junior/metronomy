@@ -8,9 +8,8 @@ describe('MetronomyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MetronomyComponent ]
-    })
-    .compileComponents();
+      declarations: [MetronomyComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
