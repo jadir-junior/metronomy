@@ -34,8 +34,11 @@ jobs:
         if: steps.cache-node-modules.outputs.cache.hit != 'true'
         run: npm ci
 
-      - name: Check Style
+      - name: Checking Style
         run: npm run style
 
       - name: Checking Lint
         run: npm run lint
+
+      - name: Building
+        run: npm run build
